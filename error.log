@@ -1,0 +1,407 @@
+2023-12-15 10:30:15,557:ERROR:An error occurred: [WinError 183] Cannot create a file when that file already exists: '15-12-2023'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO.py", line 723, in compile_trinity
+    os.mkdir(formatted_date)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: '15-12-2023'
+2023-12-15 10:35:21,467:ERROR:An error occurred: [WinError 183] Cannot create a file when that file already exists: '15-12-2023'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO.py", line 723, in compile_trinity
+    os.mkdir(formatted_date)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: '15-12-2023'
+2023-12-15 10:36:47,271:ERROR:An error occurred: HTTPSConnectionPool(host='auth.fefundinfo.com', port=443): Max retries exceeded with url: /connect/token (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000203026D3E90>: Failed to resolve 'auth.fefundinfo.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 492, in _make_request
+    raise new_e
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 1097, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connection.py", line 611, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connection.py", line 210, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000203026D3E90>: Failed to resolve 'auth.fefundinfo.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='auth.fefundinfo.com', port=443): Max retries exceeded with url: /connect/token (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000203026D3E90>: Failed to resolve 'auth.fefundinfo.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO.py", line 330, in get_bearer_token
+    response = requests.post(url, headers=headers, data=data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='auth.fefundinfo.com', port=443): Max retries exceeded with url: /connect/token (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000203026D3E90>: Failed to resolve 'auth.fefundinfo.com' ([Errno 11001] getaddrinfo failed)"))
+2023-12-15 10:36:51,449:ERROR:An error occurred: HTTPSConnectionPool(host='datafeeds.fefundinfo.com', port=443): Max retries exceeded with url: /api/v1/Feeds/bf410bd3-c880-4130-9cfa-63a65fb3aa9a (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000203027CE4D0>: Failed to resolve 'datafeeds.fefundinfo.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 492, in _make_request
+    raise new_e
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 1097, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connection.py", line 611, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connection.py", line 210, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000203027CE4D0>: Failed to resolve 'datafeeds.fefundinfo.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='datafeeds.fefundinfo.com', port=443): Max retries exceeded with url: /api/v1/Feeds/bf410bd3-c880-4130-9cfa-63a65fb3aa9a (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000203027CE4D0>: Failed to resolve 'datafeeds.fefundinfo.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO.py", line 345, in get_blob
+    response = requests.get(url, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='datafeeds.fefundinfo.com', port=443): Max retries exceeded with url: /api/v1/Feeds/bf410bd3-c880-4130-9cfa-63a65fb3aa9a (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000203027CE4D0>: Failed to resolve 'datafeeds.fefundinfo.com' ([Errno 11001] getaddrinfo failed)"))
+2023-12-15 10:36:54,857:ERROR:An error occurred: cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO.py", line 408, in populate_urls_from_excel
+    blob, container = get_blob(feed_url, token)
+    ^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+2023-12-15 10:36:58,421:ERROR:An error occurred: [WinError 183] Cannot create a file when that file already exists: '15-12-2023'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO.py", line 723, in compile_trinity
+    os.mkdir(formatted_date)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: '15-12-2023'
+2023-12-15 20:52:50,418:ERROR:An error occurred: type object 'datetime.datetime' has no attribute 'datetime'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 220, in download_file
+    log_message(f'Download Completed: {filename}')
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 83, in log_message
+    current_datetime = datetime.datetime.now()
+                       ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-12-18 21:34:00,987:ERROR:An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\Wealins\\CT\\18-12-2023_CT.csv'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC_TEST.py", line 292, in neo_w
+    custom_table_df = pd.read_csv(os.path.join(w_ct, w_ct_file_name))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\Wealins\\CT\\18-12-2023_CT.csv'
+2023-12-19 02:16:30,446:ERROR:An error occurred: cannot access local variable 's_scope_file_name' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC_TEST.py", line 319, in neo_s
+    scope_list_df = pd.read_csv(os.path.join(s_scope, s_scope_file_name))
+                                                      ^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 's_scope_file_name' where it is not associated with a value
+2023-12-19 02:20:13,593:ERROR:An error occurred: name 's_prep_delta' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC_TEST.py", line 350, in neo_s
+    delta_df.to_csv(os.path.join(s_prep_delta, delta_file_name), index=False)
+                                 ^^^^^^^^^^^^
+NameError: name 's_prep_delta' is not defined
+2023-12-20 17:30:16,849:ERROR:An error occurred: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 342, in neo_s
+    updated_custom_table_df.to_csv(os.path.join(new_neo_output, s_upload_file_name), index=False, header=['ISIN'])
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+2023-12-20 17:35:40,842:ERROR:An error occurred: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 346, in neo_s
+    updated_custom_table_df.to_csv(os.path.join(new_neo_output, s_upload_file_name), index=False, header=['ISIN'])
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+2023-12-20 17:39:00,979:ERROR:An error occurred: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 347, in neo_s
+    updated_custom_table_df.to_csv(os.path.join(new_neo_output, s_upload_file_name), index=False, header=['ISIN'])
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+2023-12-20 17:44:07,320:ERROR:An error occurred: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 348, in neo_s
+    updated_custom_table_df.to_csv(os.path.join(new_neo_output, s_upload_file_name), index=False, header=['ISIN'])
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+2023-12-20 17:46:32,751:ERROR:An error occurred: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 349, in neo_s
+    updated_custom_table_df.to_csv(os.path.join(new_neo_output, s_upload_file_name), index=False, header=['ISIN'])
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Aditya.Apte\\OneDrive - FE fundinfo\\Desktop\\Desktop Icons\\Aditya Apte\\AERO_PWC\\NEO\\20-12-2023\\Upload\\20-12-2023_SogeLife-Upload.csv'
+2023-12-20 19:19:28,946:ERROR:An error occurred: 500 Server Error: Internal Server Error for url: https://datafeeds.fefundinfo.com/api/v1/CustomFiles/b9e2ea6e-11c1-4877-9510-1f9ef52c4727?permissionContainerId=83f51d6d-b2ab-44b4-9576-5b48f3c78c35
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 231, in download_file
+    response.raise_for_status()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://datafeeds.fefundinfo.com/api/v1/CustomFiles/b9e2ea6e-11c1-4877-9510-1f9ef52c4727?permissionContainerId=83f51d6d-b2ab-44b4-9576-5b48f3c78c35
+2023-12-20 19:20:18,978:ERROR:An error occurred: 500 Server Error: Internal Server Error for url: https://datafeeds.fefundinfo.com/api/v1/CustomFiles/b9e2ea6e-11c1-4877-9510-1f9ef52c4727?permissionContainerId=83f51d6d-b2ab-44b4-9576-5b48f3c78c35
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 231, in download_file
+    response.raise_for_status()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://datafeeds.fefundinfo.com/api/v1/CustomFiles/b9e2ea6e-11c1-4877-9510-1f9ef52c4727?permissionContainerId=83f51d6d-b2ab-44b4-9576-5b48f3c78c35
+2023-12-20 19:23:25,933:ERROR:An error occurred: 500 Server Error: Internal Server Error for url: https://datafeeds.fefundinfo.com/api/v1/CustomFiles/b9e2ea6e-11c1-4877-9510-1f9ef52c4727?permissionContainerId=83f51d6d-b2ab-44b4-9576-5b48f3c78c35
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 231, in download_file
+    response.raise_for_status()
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://datafeeds.fefundinfo.com/api/v1/CustomFiles/b9e2ea6e-11c1-4877-9510-1f9ef52c4727?permissionContainerId=83f51d6d-b2ab-44b4-9576-5b48f3c78c35
+2023-12-20 19:34:04,945:ERROR:An error occurred: name 'csv' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 303, in neo_w
+    reader = csv.reader(file)
+             ^^^
+NameError: name 'csv' is not defined
+2023-12-20 19:40:33,930:ERROR:An error occurred: name 'islice' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 305, in neo_w
+    unique_custom_table_set = {row[0].strip() for row in islice(reader, 1, None) if len(row[0].strip()) == 12}
+                                                         ^^^^^^
+NameError: name 'islice' is not defined
+2023-12-20 19:41:28,266:ERROR:An error occurred: 'charmap' codec can't decode byte 0x8d in position 54: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 317, in neo_w
+    for row in reader:
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8d in position 54: character maps to <undefined>
+2023-12-20 19:51:46,059:ERROR:An error occurred: 'charmap' codec can't decode byte 0x8d in position 54: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 316, in neo_w
+    next(reader)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8d in position 54: character maps to <undefined>
+2023-12-20 19:54:16,678:ERROR:An error occurred: 'utf-8' codec can't decode bytes in position 50-51: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 316, in neo_w
+    next(reader)
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 50-51: invalid continuation byte
+2023-12-20 20:06:26,337:ERROR:An error occurred: name 'openpyxl' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 314, in neo_w
+    workbook = openpyxl.load_workbook(w_scope, item)
+               ^^^^^^^^
+NameError: name 'openpyxl' is not defined
+2023-12-20 20:08:20,942:ERROR:An error occurred: openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 315, in neo_w
+    workbook = openpyxl.load_workbook(w_scope, item)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\openpyxl\reader\excel.py", line 93, in _validate_archive
+    raise InvalidFileException(msg)
+openpyxl.utils.exceptions.InvalidFileException: openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+2023-12-20 20:09:21,254:ERROR:An error occurred: openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 315, in neo_w
+    workbook = openpyxl.load_workbook(w_scope, item)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\venv\Lib\site-packages\openpyxl\reader\excel.py", line 93, in _validate_archive
+    raise InvalidFileException(msg)
+openpyxl.utils.exceptions.InvalidFileException: openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+2023-12-20 20:13:20,389:ERROR:An error occurred: name 'sheet_name' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 316, in neo_w
+    sheet = workbook[sheet_name]
+                     ^^^^^^^^^^
+NameError: name 'sheet_name' is not defined
+2023-12-20 20:15:11,772:ERROR:An error occurred: name 'unique_values' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 322, in neo_w
+    unique_values.add(code)
+    ^^^^^^^^^^^^^
+NameError: name 'unique_values' is not defined
+2023-12-20 20:17:13,281:ERROR:An error occurred: 'list' object has no attribute 'add'
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 323, in neo_w
+    unique_values.add(code)
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'add'
+2023-12-20 20:17:59,407:ERROR:An error occurred: name 'scope_list_isins' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 328, in neo_w
+    added_isins = [isin for isin in scope_list_isins if isin not in custom_table_isins]
+                                    ^^^^^^^^^^^^^^^^
+NameError: name 'scope_list_isins' is not defined
+2023-12-20 21:24:06,919:ERROR:An error occurred: name 'w_ct_file_name' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 353, in neo_s
+    with open(os.path.join(w_ct, w_ct_file_name), mode='r', encoding='utf-8') as file:
+                                 ^^^^^^^^^^^^^^
+NameError: name 'w_ct_file_name' is not defined
+2023-12-20 21:25:17,402:ERROR:An error occurred: cannot access local variable 'scope_list_list' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 366, in neo_s
+    added_isins = [isin for isin in scope_list_list if isin not in custom_table_list]
+                                    ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'scope_list_list' where it is not associated with a value
+2023-12-20 21:28:15,097:ERROR:An error occurred: cannot access local variable 'scope_list_list' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Aditya.Apte\PycharmProjects\pythonProject\AERO_PWC.py", line 365, in neo_s
+    added_isins = [isin for isin in scope_list_list if isin not in custom_table_list]
+                                    ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'scope_list_list' where it is not associated with a value
